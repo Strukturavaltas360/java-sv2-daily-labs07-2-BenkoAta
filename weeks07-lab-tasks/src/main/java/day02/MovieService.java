@@ -16,8 +16,8 @@ public class MovieService {
             for (String line: lines) {
                 movies.add(readMovie(line));
             }
-        } catch (IOException e) {
-            throw new IllegalStateException("Can not read file!");
+        } catch (IOException ioe) {
+            throw new IllegalStateException("Can not read file!", ioe);
         }
     }
 
